@@ -1,0 +1,135 @@
+<!-- Week 4 Notes
+
+Outcomes
+- CSS syntax
+- Selectors
+- Classes and IDS
+- Combinators
+- Internal and External and Stylesheets
+
+-->
+
+<!DOCTYPE html>
+<html lang="EN-CA">
+  <head>
+    <meta charset="UTF-8">
+    <!-- Will discuss this in next week's lesson -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Syntax and Selectors
+- All CSS will be put within the head tags and this rule will change everything in the document within the style tags 
+
+- you can put together multiple tags which have the same style ex. h1, h2 (combinators)
+
+- Adjusts the line spacing (line-height)
+
+ - The font Georgia will be used but if it is not on the computer it will use serif (font-family)
+
+- 40 pixels all around the text (margin)
+- you can also use margin-top and adjust different sections of the margins
+
+- maximum width the text can have (max-width)
+
+- changes the size of the font (font-size)
+
+- Padding creates space inside an element, between its content and its border. Margin creates space outside an element, between its border and other surrounding elements.
+
+- If the margin property has four values:
+
+margin: 10px 5px 15px 20px;
+top margin is 10px
+right margin is 5px
+bottom margin is 15px
+left margin is 20px
+If the margin property has three values:
+
+margin: 10px 5px 15px;
+top margin is 10px
+right and left margins are 5px
+bottom margin is 15px
+If the margin property has two values:
+
+margin: 10px 5px;
+top and bottom margins are 10px
+right and left margins are 5px
+If the margin property has one value:
+
+margin: 10px;
+all four margins are 10px
+-->
+
+    <!-- Classes and ID
+- Classes - how to target some things but not others without hard coding it (use .highlight)
+- IDs however can only be used once per page (use #paragraph-3)
+-->
+    <style>
+      h1,
+      h2 {
+        color: blue;
+      }
+
+      p {
+        color: green;
+        line-height: 1.5;
+      }
+
+      h1 {
+        padding-top: 20px;
+        background-color: yellow;
+        letter-spacing: 2px;
+      }
+
+      body {
+        font-family: Georgia, serif;
+        margin: 40px;
+        max-width: 800px;
+        font-size: 20px;
+      }
+
+      .highlight {
+        background-color: lightgrey;
+        font-weight: bold
+      }
+
+      #paragraph-3 {
+        background-color: lightblue;
+        border-bottom: 1px dashed navy;
+        text-align: center;
+      }
+
+      #keypoint {
+        background-color: orange;
+        padding: 15px;
+        border: 5px solid black;
+        margin: 20px, 0px;
+      }
+
+      .example {
+        background-color: violet;
+        padding: 25px;
+        border-left: 15px solid blue;
+        margin: 20px, 0px;
+      }
+    </style>
+
+
+    <title> Week 4 Notes </title>
+  </head>
+  <body>
+    <h1>
+      Week 4
+    </h1>
+    <h2>
+      Notes
+    </h2>
+    <p class="highlight">
+      This text is green because of the syntax and selectors
+    </p>
+    <p style="color:black">
+      However, you can still hard code the style tags as normal, but to do this for multiple lines of code the sytax and selectors would make it a lot easier
+    </p>
+    <p id="paragraph-3"> This is in an ID text </p>
+    <p id="keypoint"> Test for keypoint ID </p>
+    <p class="example">Test for example in classes </p>
+  </body>
+</html>
